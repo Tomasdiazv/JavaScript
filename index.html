@@ -36,13 +36,6 @@
                     <label for="renta">Renta</label>
                     <input type="number1" class="form-control" id="renta" placeholder="Ingrese su renta liquida">
                 </div>
-            </div> 
-               <!--  <div class="form-group mt-2 mb-3 alert alert-danger" hidden id="alert-error">
-                    Debes llenar todos los campos!
-                </div> -->
-    
-            <div class="col-12 col-sm-12 col-lg-6">
-                
                 <div class="form-group mt-2 mb-3">
                     <label for="monto">Monto</label>
                     <input type="text" class="form-control" id="monto" placeholder="Ingresar monto">
@@ -55,12 +48,28 @@
                     <label for="interes">Interés Mensual %</label>
                     <input type="text" class="form-control" id="interes" placeholder="Ingresar tasa de interés mensual" value="1.15" disabled=»disabled»>
                 </div>
-            </div>
+            
                 <div class="col-4">
                     <button type="button" class="btn btn-primary" id="btnCalcular" onclick="calcular()">Calcular</button>
                 </div> 
+            </div>
         
-        </div>
+        
+            <div class="col-12 col-sm-12 col-lg-6">
+                <table id="lista-tabla" class="table">
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Amortización</th>
+                            <th>Interés</th>
+                            <th>Cuota</th>
+                            <th>Saldo</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>  
     </div>
 
 

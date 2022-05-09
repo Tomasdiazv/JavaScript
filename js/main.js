@@ -1,7 +1,7 @@
 function calcular(){
-   let nombre = document.getElementById('nombre').value;
-   let email = document.getElementById('inputEmail4').value;
-   let celular = document.getElementById('celular').value;
+   //let nombre = document.getElementById('nombre').value;
+   //let email = document.getElementById('inputEmail4').value;
+   //let celular = document.getElementById('celular').value;
    let monto = document.getElementById('monto').value;
    let cuotas = document.getElementById('cuotas').value;
    let interes = document.getElementById('interes').value;
