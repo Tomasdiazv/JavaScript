@@ -1,7 +1,7 @@
 const llenarTabla = document.querySelector('#lista-tabla tbody');
 const notificacion = document.getElementById('alert-error');
-
-
+const usuario = localStorage.getItem("username");
+alert(`Bienvenido ${usuario}`);
 
 function calcular(){
 //let nombre = document.getElementById('nombre').value;
