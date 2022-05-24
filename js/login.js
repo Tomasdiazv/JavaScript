@@ -12,7 +12,12 @@ function validateUser(){
         localStorage.setItem("password", password);
         window.location.href = '../index.html';
     }else{
-        alert("Los datos ingresados son incorrectos.")
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'El usuario o contraseña es incorrecto',
+            footer: '<a href="">¿Por qué tengo este problema?</a>'
+          })
     }
 }
 

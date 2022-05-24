@@ -1,7 +1,14 @@
 const llenarTabla = document.querySelector('#lista-tabla tbody');
 const notificacion = document.getElementById('alert-error');
 const usuario = localStorage.getItem("username");
-alert(`Bienvenido ${usuario}`);
+
+Swal.fire({
+    position: 'top-center',
+    icon: 'success',
+    title: 'Bienvenido ' + usuario,
+    showConfirmButton: false,
+    timer: 2000
+  })
 
 function calcular(){
 //let nombre = document.getElementById('nombre').value;
