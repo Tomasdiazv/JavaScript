@@ -1,3 +1,8 @@
+window.onload = function() {
+    getInfo();
+  };
+
+
 const llenarTabla = document.querySelector('#lista-tabla tbody');
 const notificacion = document.getElementById('alert-error');
 const usuario = localStorage.getItem("username");
@@ -94,3 +99,20 @@ while(llenarTabla.firstChild) {
     }
 }
 
+function getInfo(){
+    let position = document.getElementById("selectBancos");
+    fetch('app.json')
+    .then(response => response.json())
+    .then(response => { 
+        for (let index = 0; index < response.length; index++) {
+            position.innerHTML += "<option interes ="+ response[index].tasaInteres +" value="+ response[index].id +"> "+ response[index].nombreEntidad +" </option>"
+        }
+    }
+    );
+} 
+
+document.querySelector("#selectBancos").addEventListener("change", function(){
+    let select2 = document.getElementById("selectBancos");
+    let selectedOption = this.options[select2.selectedIndex]; console.log(selectedOption.getAttribute("interes"));
+    document.getElementById('interes').value = selectedOption.getAttribute("interes"); 
+})

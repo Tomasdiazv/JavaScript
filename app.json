@@ -1,0 +1,22 @@
+[
+    {
+        "nombreEntidad": "Banco Estado",
+        "id": 1,
+        "tasaInteres": 1.15
+    },
+    {
+        "nombreEntidad": "Banco de Chile",
+        "id": 2,
+        "tasaInteres": 1.19
+    },
+    {
+        "nombreEntidad": "Banco Santander",
+        "id": 3,
+        "tasaInteres": 1.3
+    },
+    {
+        "nombreEntidad": "Banco Fallabela",
+        "id": 4,
+        "tasaInteres": 1.23
+    }
+]
