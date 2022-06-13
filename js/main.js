@@ -59,20 +59,8 @@ if(parseInt(renta) > parseInt(rentaMinima)){
 
 const showInformationCredit = (cuotas,calcularCredito,renta) => {
 
-  const meses = [
-    "Enero",
-    "Febrero",
-    "Marzo",
-    "Abril",
-    "Mayo",
-    "Junio",
-    "Julio",
-    "Agosto",
-    "Septiembre",
-    "Octubre",
-    "Noviembre",
-    "Diciembre",
-]; 
+    let mesActual = dayjs().add(1, 'month');
+
 while(llenarTabla.firstChild) {
     llenarTabla.removeChild(llenarTabla.firstChild);
 }
@@ -85,9 +73,13 @@ while(llenarTabla.firstChild) {
         notificacion.hidden = false;
         notificacion.innerHTML = evComercial.mensaje;
         for (i =0; i<parseInt(cuotas);i++) {
+
+            let meses = mesActual.format('DD-MM-YYYY');
+            mesActual = mesActual.add(1, 'month');
+
             const row = document.createElement('tr');
-            row.innerHTML = `
-                <td>${meses[i]}</td>
+            row.innerHTML = `   
+                <td>${meses}</td>
                 <td>${Math.round(calcularCredito['valorCuota'])}</td>
             `;
             llenarTabla.appendChild(row);
